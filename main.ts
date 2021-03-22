@@ -79,6 +79,7 @@ function schreibeGeschwindigkeit () {
     pins.analogWritePin(AnalogPin.P14, vr)
     pins.analogWritePin(AnalogPin.P13, vl)
 }
+
 let vl = 0
 let vr = 0
 stop()
@@ -98,3 +99,7 @@ basic.forever(function () {
     schreibeGeschwindigkeit()
 })
 
+input.magneticForce(Dimension.X)
+basic.forever(function ()
+korrigiereRichtung() {   
+})
